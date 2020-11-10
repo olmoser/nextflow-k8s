@@ -25,17 +25,18 @@ You will also need [nextflow]: -
 
 ## Execution
 You will need a service account that permits the execution and
-monitoring of Pods. The "default" service account will not be sufficient.
-You can define the service account using a local configuration file, i.e.
+monitoring of Pods. The `default` service account present in all namespaces
+will not be sufficient.
+
+You can identify the service account using a local configuration file, i.e.
 create the following `nextflow.config` in your execution directory, replacing
-`<SERVICE_ACCOUNT_NAME>` with a service account in your namespace: -
+`<SERVICE_ACCOUNT_NAME>` with a suitable service account in your namespace: -
 
     k8s {
-        serviceAccount = '<SERVCIE_ACCOUNT_NAME>'
+        serviceAccount = '<SERVICE_ACCOUNT_NAME>'
     }
 
- 
-Now, with access to a Kubernetes namespace set it as the default namespace,
+Now, set your namespace as the default namespace,
 create a PVC and then run this nextflow project: -
 
     $ NAMESPACE=my-namespace
