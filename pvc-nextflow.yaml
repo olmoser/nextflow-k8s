@@ -1,0 +1,20 @@
+---
+
+# A small PVC using the storage class 'efs'
+# which is expected to offer ReadWriteMany
+#
+# Deploy with: -
+#
+#   $ kubectl create -f pvc-nextflow.yaml -n $NAMESPACE
+
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: nextflow
+spec:
+  accessModes:
+  - ReadWriteMany
+  storageClassName: efs
+  resources:
+    requests:
+      storage: '1Gi'
