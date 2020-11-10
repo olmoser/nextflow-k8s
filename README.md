@@ -1,5 +1,6 @@
 # nextflow-k8s
-A (very simple) *getting-started* example for Nextflow kubernetes execution.
+A (very simple) *getting-started* example for Nextflow kubernetes execution
+that relies on access to a kubernetes cluster and a git-deployed workflow.
 
 ## Prerequisites
 You must have access to a kubernetes cluster, i.e. the following command should
