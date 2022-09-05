@@ -3,7 +3,7 @@
 cheers = Channel.from 'Bonjour', 'Ciao', 'Hello', 'Hola'
 
 process sayHello {
-  cpus 1	
+  cpus 0.5
   echo true
   executor 'k8s'
   input: 
